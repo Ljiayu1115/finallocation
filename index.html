@@ -1,45 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>高雄到處吃</title>
+
     <!-- 引入 Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-       * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-      
         #imghead {
-           
-            width: 100%; /* 寬度自動填滿視窗 */
-            height: 200px; /* 高度根據圖片比例自動調整 */
-           
+            width: 100%; 
+            height: 200px; 
         }
-
-        #imgDog{
-          width: 150px;
-          height: 150px;
-          border-radius: 50%;
-          margin-right: auto;
-          margin-left: auto;
-          margin: -100px auto 0; /* 上邊距為 -150px，自動左右置中 */
-          display: block; /* 讓圖片成為區塊級元素 */
+        #imgDog {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: auto;
+            margin-left: auto;
+            margin: -100px auto 0; 
+            display: block; 
         }
     </style>
 
     <style>
-      html {
-        scroll-behavior: smooth;
-         }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <style>
+        .button {
+            background-color: #f3156a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            background-color: #6aeef8;
+            transform: scale(1.1);
+        }
+
+        .image-hover img {
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .image-hover img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Navbar 樣式 */
+        .navbar-nav .nav-link {
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #fff;
+            background-color: #2ca5bd;
+            border-radius: 5px;     
+            transform: scale(1.05); 
+        }
     </style>
 
+    <style>
+    
+        .image-container {
+            display: flex;             
+            justify-content: center;   
+            align-items: center;    
+            gap: 20px;               
+            margin-top: 20px;
+        }
+
+  
+        .image-hover img {
+            width: 300px;            
+            height: auto;              
+            border-radius: 10px;    
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .image-hover img:hover {
+            transform: scale(1.1);      
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
 </head>
+
+
+
 <body>
     
 
@@ -48,14 +105,14 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <!-- Home 按鈕 -->
+
         <li class="nav-item active">
           <a class="nav-link" href="https://ljiayu1115.github.io/final/" ><b>簡介</b></a>
         </li>
-        <!-- 地點 按鈕 -->
+
         <li class="nav-item">
           <a class="nav-link" href="#location"><b>地點</b></a>
         </li>
@@ -71,7 +128,6 @@
    
 
 
-<!-- 頁面內容 -->
 
 
 <div id="location" style="padding: 100px; background-color: #f4f497;">
@@ -80,72 +136,184 @@
 
 
   <div class="container">
-      
     <div class="card-group">
-      <div class="card">
-        <img src="blacktea.jpg" class="card-img-top" alt="blacktea">
-        <div class="card-body">
-          <h5 class="card-title">旗山香蕉紅茶冰</h5>
-          <p class="card-text">去旗山陪學妹做作業時經過，原本以為超難喝的，結果意外的甘甜消暑</p>
-          <p class="card-text"><small class="text-body-secondary">4.5/5 (∩^o^)⊃━☆</small></p>
-          <a href="https://maps.app.goo.gl/4hrquiMseoDwxkT8A" class="link-bottom-right">Learn more</a>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">旗山香蕉紅茶冰</h5>
+                <p class="card-text">去旗山陪學妹做作業時經過，原本以為超難喝的，結果意外的甘甜消暑</p>
+                <p class="card-text"><small class="text-body-secondary">4.5/5 (∩^o^)⊃━☆</small></p>
+                <a href="https://maps.app.goo.gl/4hrquiMseoDwxkT8A" class="link-bottom-right">Learn more</a>
+            </div>
+            <div class="card-image">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="blacktea.jpg" class="card-img-top" alt="blacktea">
+                    </div>
+                    <div class="card-back">
+                        <img src="N4.5.png" class="card-img-top" alt="blacktea">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="hotpot.jpg" class="card-img-top" alt="hotpot">
-        <div class="card-body">
-          <h5 class="card-title">臻馨鍋物</h5>
-          <p class="card-text">今年生日去嘗鮮，東西很新鮮，很多東西可以選擇，最後還多帶一隻冰淇淋出去吃</p>
-          <p class="card-text"><small class="text-body-secondary">4.0/5 (∩^o^)⊃━☆</small></p>
-          <a href="https://maps.app.goo.gl/7GAiXZeFE92BZEgX9" class="link-bottom-right">Learn more</a>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">臻馨鍋物</h5>
+                <p class="card-text">今年生日去吃，東西新鮮，很多東西可以選擇，最後還多帶一隻冰淇淋出去吃</p>
+                <p class="card-text"><small class="text-body-secondary">4.0/5 (∩^o^)⊃━☆</small></p>
+                <a href="https://maps.app.goo.gl/7GAiXZeFE92BZEgX9" class="link-bottom-right">Learn more</a>
+            </div>
+            <div class="card-image">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="hotpot.jpg" class="card-img-top" alt="hotpot">
+                    </div>
+                    <div class="card-back">
+                        <img src="N4.0.jpg" class="card-img-top" alt="hotpot">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="icecream.jpg" class="card-img-top" alt="icecream">
-        <div class="card-body">
-          <h5 class="card-title">泥岩冰淇淋</h5>
-          <p class="card-text">去田寮看月世界的時候看到，太特別了，吃起來有培樂多黏土的味道</p>
-          <p class="card-text"><small class="text-body-secondary">3.5/5 (∩^o^)⊃━☆</small></p>
-          <a href="https://maps.app.goo.gl/NMiXriyZfRfYF7JF8" class="link-bottom-right">Learn more</a>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">泥岩冰淇淋</h5>
+                <p class="card-text">去田寮看月世界的時候看到，太特別了，吃起來有培樂多黏土的味道</p>
+                <p class="card-text"><small class="text-body-secondary">3.5/5 (∩^o^)⊃━☆</small></p>
+                <a href="https://maps.app.goo.gl/NMiXriyZfRfYF7JF8" class="link-bottom-right">Learn more</a>
+            </div>
+            <div class="card-image">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="icecream.jpg" class="card-img-top" alt="icecream">
+                    </div>
+                    <div class="card-back">
+                        <img src="N43.5.jpg" class="card-img-top" alt="icecream">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+
     <div class="card-group">
-      <div class="card">
-        <img src="ice.jpg" class="card-img-top" alt="ice">
-        <div class="card-body">
-          <h5 class="card-title">高雄婆婆冰</h5>
-          <p class="card-text">駁二老街的傳統冰店，第一次吃杏仁冰，意外的還能接受味道</p>
-          <p class="card-text"><small class="text-body-secondary">4.0/5 (∩^o^)⊃━☆</small></p>
-          <a href="https://maps.app.goo.gl/qQGsDdZ1bCKEcCTSA" class="link-bottom-right">Learn more</a>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">高雄婆婆冰</h5>
+                <p class="card-text">駁二老街的傳統冰店，第一次吃杏仁冰，意外的還能接受味道</p>
+                <p class="card-text"><small class="text-body-secondary">4.0/5 (∩^o^)⊃━☆</small></p>
+                <a href="https://maps.app.goo.gl/qQGsDdZ1bCKEcCTSA" class="link-bottom-right">Learn more</a>
+            </div>
+            <div class="card-image">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="ice.jpg" class="card-img-top" alt="ice">
+                    </div>
+                    <div class="card-back">
+                        <img src="N4.01.jpg" class="card-img-top" alt="ice">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="noddle.jpg" class="card-img-top" alt="noddle">
-        <div class="card-body">
-          <h5 class="card-title">朝月冷麵王韓式料理</h5>
-          <p class="card-text">酸甜味的冷麵非常開胃好吃，但海鮮煎餅有點膩</p>
-          <p class="card-text"><small class="text-body-secondary">4.5/5 (∩^o^)⊃━☆</small></p>
-          <a href="https://maps.app.goo.gl/Z24ozKZNkPjCfgz77" class="link-bottom-right">Learn more</a>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">朝月冷麵王韓式料理</h5>
+                <p class="card-text">酸甜味的冷麵非常開胃好吃，但海鮮煎餅有點膩</p>
+                <p class="card-text"><small class="text-body-secondary">4.5/5 (∩^o^)⊃━☆</small></p>
+                <a href="https://maps.app.goo.gl/Z24ozKZNkPjCfgz77" class="link-bottom-right">Learn more</a>
+            </div>
+            <div class="card-image">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="noddle.jpg" class="card-img-top" alt="noddle">
+                    </div>
+                    <div class="card-back">
+                        <img src="N4.5.jpg" class="card-img-top" alt="noddle">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="sweet.jpg" class="card-img-top" alt="sweet">
-        <div class="card-body">
-          <h5 class="card-title">行事紅心粉圓</h5>
-          <p class="card-text">在高雄師大旁邊的粉圓店，開到凌晨一點，糖水味很香還可以條甜度</p>
-          <p class="card-text"><small class="text-body-secondary">3.8/5 (∩^o^)⊃━☆</small></p>
-          <a href="https://maps.app.goo.gl/xX1r1PToQ64VRxd36" class="link-bottom-right">Learn more</a>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">行事紅心粉圓</h5>
+                <p class="card-text">在高雄師大旁邊的粉圓店，開到凌晨一點，糖水味很香還可以條甜度</p>
+                <p class="card-text"><small class="text-body-secondary">3.8/5 (∩^o^)⊃━☆</small></p>
+                <a href="https://maps.app.goo.gl/xX1r1PToQ64VRxd36" class="link-bottom-right">Learn more</a>
+            </div>
+            <div class="card-image">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="sweet.jpg" class="card-img-top" alt="sweet">
+                    </div>
+                    <div class="card-back">
+                        <img src="N3.8.jpg" class="card-img-top" alt="sweet">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
+
+<!-- 動態卡片的CSS與JS -->
+<style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 400px;
+        margin: 20px;
+    }
+
+    .card-body {
+        flex: 1;
+    }
+
+    .card-image {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        perspective: 1000px;
+    }
+
+    .card-inner {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        position: absolute;
+    }
+
+    .card:hover .card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-front img, .card-back img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card-back {
+        transform: rotateY(180deg);
+    }
+</style>
 
 </div>
 
 
     <footer>
-        <p>© 2024 美食地圖 Blog</p>
+        <p>© 嘉宇的美食地圖 Blog</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
